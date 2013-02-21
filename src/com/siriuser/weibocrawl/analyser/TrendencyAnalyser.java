@@ -15,6 +15,10 @@ import com.chenlb.mmseg4j.MMSeg;
 import com.chenlb.mmseg4j.Word;
 import com.siriuser.weibocrawl.Constants;
 
+/**
+ * @author William Xu
+ *
+ */
 public class TrendencyAnalyser {
 
 	TrendencyWordsLoader wordLoader;
