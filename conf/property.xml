@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <fetchers>
-	<fetcher name="weiboFetcher" class="com.yidatec.vis.owncrawl.fetcher.WeiboFetcher" depth="1">
-		<policy class="com.yidatec.vis.owncrawl.keywords.policy.SinaKeyWordsPolicy">
+	<fetcher name="weiboFetcher" class="com.siriuser.weibocrawl.fetcher.WeiboFetcher" depth="1">
+		<policy class="com.siriuser.weibocrawl.keywords.policy.SinaKeyWordsPolicy">
 		</policy>
 	</fetcher>
 </fetchers>
