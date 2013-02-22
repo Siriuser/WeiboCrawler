@@ -21,7 +21,9 @@ import com.siriuser.weibocrawl.Constants;
  */
 public class TrendencyAnalyser {
 
-	TrendencyWordsLoader wordLoader;
+	private static TrendencyAnalyser instance;
+	
+	private TrendencyWordsLoader wordLoader;
 
 	protected static final Dictionary dic = Dictionary.getInstance();
 	protected static final ComplexSeg seg = new ComplexSeg(dic);
@@ -43,6 +45,23 @@ public class TrendencyAnalyser {
 	private List<Word> negs = null;
 	private List<Word> poses = null;
 	private List<Word> rels = null;
+	
+	
+	private TrendencyAnalyser(){
+		wordLoader = new TrendencyWordsLoader();
+	}
+	
+	public static TrendencyAnalyser getInstance(){
+		
+		if(instance == null){
+			
+			instance = new TrendencyAnalyser();
+			
+		}
+		
+		return instance;
+		
+	}
 
 	public int analyzeTrendency(String title, String content) {
 

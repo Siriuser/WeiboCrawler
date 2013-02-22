@@ -19,6 +19,7 @@ import org.apache.solr.common.SolrInputDocument;
 import com.siriuser.weibocrawl.Constants;
 import com.siriuser.weibocrawl.Crawl;
 import com.siriuser.weibocrawl.MD5Signature;
+import com.siriuser.weibocrawl.analyser.TrendencyAnalyser;
 import com.siriuser.weibocrawl.keywords.policy.KeyWordsPolicy;
 
 public abstract class AbstractFetcher implements Fetcher {
@@ -249,6 +250,10 @@ public abstract class AbstractFetcher implements Fetcher {
 			sid.addField(Constants.FIELD_TITLE, title);
 			sid.addField(Constants.FIELD_PUBLISHDATE, date);
 			sid.addField(Constants.FIELD_DIGEST, md5Signature.calculate(content));
+			
+			// 增加倾向性分析
+			sid.addField(Constants.FIELD_TREND, TrendencyAnalyser.getInstance().analyzeTrendency(title, content));
+			
 		}
 		
 		return sid;

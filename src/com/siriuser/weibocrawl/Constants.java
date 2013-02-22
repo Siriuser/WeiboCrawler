@@ -9,6 +9,7 @@ public interface Constants {
 	public final static int SOLR_MAX_COMMIT_CNT = 1000;
 	
 	public final static String FIELD_ID = "id";
+	public final static String FIELD_TREND = "2";
 	public final static String FIELD_URL ="url";
 	public final static String FIELD_CONTENT ="content";
 	public final static String FIELD_TITLE ="title";

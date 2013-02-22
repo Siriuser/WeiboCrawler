@@ -11,6 +11,7 @@ import org.apache.solr.client.solrj.impl.CommonsHttpSolrServer;
 import org.apache.solr.common.SolrInputDocument;
 
 import com.siriuser.weibocrawl.Constants;
+import com.siriuser.weibocrawl.analyser.TrendencyAnalyser;
 
 public class SolrUtils {
 	
@@ -60,7 +61,7 @@ public class SolrUtils {
 		for (SolrInputDocument solrInputDocument : documents) {
 			
 			solrInputDocument.addField(Constants.FIELD_TSTAMP, now);
-			
+
 			System.out.println("index url: " + solrInputDocument.getFieldValue(Constants.FIELD_URL));
 		}
 		

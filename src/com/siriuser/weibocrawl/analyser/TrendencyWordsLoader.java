@@ -40,10 +40,8 @@ public class TrendencyWordsLoader {
 			// FileReader fr = new
 			// FileReader(this.getClass().getClassLoader().getResource(PSMSConstants.NEG_WORDS_PATH).getFile());
 
-			InputStreamReader ir = new InputStreamReader(new FileInputStream(
-					this.getClass().getClassLoader()
-							.getResource(Constants.NEG_WORDS_PATH)
-							.getFile()), "utf-8");
+			InputStreamReader ir = new InputStreamReader(
+					new FileInputStream(Constants.NEG_WORDS_PATH), "utf-8");
 
 			BufferedReader br = new BufferedReader(ir);
 
@@ -55,9 +53,7 @@ public class TrendencyWordsLoader {
 				negWordMap.put(words[0], Integer.parseInt(words[1]));
 			}
 
-			ir = new InputStreamReader(new FileInputStream(this.getClass()
-					.getClassLoader().getResource(Constants.POS_WORDS_PATH)
-					.getFile()), "utf-8");
+			ir = new InputStreamReader(new FileInputStream(Constants.POS_WORDS_PATH), "utf-8");
 			br = new BufferedReader(ir);
 			line = null;
 
@@ -67,9 +63,7 @@ public class TrendencyWordsLoader {
 				posWordMap.put(words[0], Integer.parseInt(words[1]));
 			}
 
-			ir = new InputStreamReader(new FileInputStream(this.getClass()
-					.getClassLoader().getResource(Constants.REL_WORDS_PATH)
-					.getFile()), "utf-8");
+			ir = new InputStreamReader(new FileInputStream(Constants.REL_WORDS_PATH), "utf-8");
 			br = new BufferedReader(ir);
 
 			line = null;
