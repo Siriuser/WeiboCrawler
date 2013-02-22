@@ -40,16 +40,16 @@ public abstract class AbstractFetcher implements Fetcher {
 
 		this.policy = policy;
 
-		try {
-			InputStreamReader reader = new InputStreamReader(
-					new FileInputStream("conf/fetch_filter"), "utf-8");
-			readRules = null;
-			readRules = readRules(reader);
-		} catch (IllegalArgumentException e) {
-			e.printStackTrace();
-		} catch (IOException e) {
-			e.printStackTrace();
-		}
+//		try {
+//			InputStreamReader reader = new InputStreamReader(
+//					new FileInputStream("conf/fetch_filter"), "utf-8");
+//			readRules = null;
+//			readRules = readRules(reader);
+//		} catch (IllegalArgumentException e) {
+//			e.printStackTrace();
+//		} catch (IOException e) {
+//			e.printStackTrace();
+//		}
 
 	}
 
